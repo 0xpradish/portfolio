@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="check">
+        <div class="navbar">
+            <h2 id="name">Pradish Pranam</h2>
+        </div>
+    </div>
+    
+    <div class="outer-box">
+        <div class="inner-box-schema">
+
+            <div class="schema-tree">
+                <ul class="tree">
+                    <li>
+                        <span class="collapsible">
+                            <i class="fa-solid fa-server"></i> Schema (1)
+                        </span>
+                        <ul class="nested"> <!-- Nested elements start here -->
+                            <li>
+                                <span class="collapsible">
+                                    <i class="fa-solid fa-database"></i> Pradish Pranam
+                                </span>
+                                <ul class="nested">
+                                    <li><i class="fa-solid fa-table"></i> Experience</li>
+                                    <li><i class="fa-solid fa-table"></i> Education</li>
+                                    <li><i class="fa-solid fa-table"></i> Skills</li>
+                                    <li><i class="fa-solid fa-table"></i> Certificates</li>
+                                    <li><i class="fa-solid fa-table"></i> Projects</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="inner-box-query-engine">
+            <div class="query-space">
+                <div class="query-navbar">
+                    <h3 id="query-name">Query Engine</h3>
+                    <div class="query-navbar-icons">
+                        <a href="https://www.linkedin.com/in/pradishpranam/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://discord.com/invite/your-server/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                        <a href="https://github.com/0xpradish" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1vRh06tqvQHgXfAVVMA7W0_--qsqCOpiu/view?usp=sharing" download>
+                            <i class="fa-solid fa-circle-down"></i>
+                        </a>
+                        <i class="fa-solid fa-hippo hippo-icon"></i>
+                        
+
+                    </div>
+
+                </div>
+                
+                <textarea id="queryInput" placeholder="Write your query here..."></textarea>
+                <button id="runQuery">Run Query</button>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <span class="close-btn" id="closeBtn">&times;</span>
+                    <img src="ronaldo-sui.gif" alt="Ronaldo Sii" />
+                </div>
+            </div>
+            <div class="result-space">
+            </div>
+        </div>
+        
+    </div>
+    <script src="../static/js/app.js"></script>
+</body>
+</html>
+
+
+
