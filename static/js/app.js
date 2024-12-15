@@ -19,19 +19,49 @@ const educationData = [
 
 const skillsData = [
     {
-        institution: "Karpagam Academy of Higher Education",
-        degree: "Bachelor of Technology",
-        field: "Artificial Intelligence and Data Science",
-        year: "2020-2024",
-        gpa: "8.7/10"
+        type: "Programming",
+        skills: "Python",
+        
     },
     {
-        institution: "Stanes Anglo Indian Hr Sec School",
-        degree: "HSC",
-        field: "Computer Sceince",
-        year: "2018-2020",
-        gpa: "72%"
+        type: "Big Data",
+        skills: "SQL • Spark • Pyspark • Hadoop • Hive • Pandas",
+        
+    },
+    {
+        type: "Amazon Web Services",
+        skills: "Glue • S3 • DynamoDB • Lambda • Step Function • Redshift • EC2",
+        
+    },
+    {
+        type: "Web Frameworks",
+        skills: "FastAPI",
+        
+    },
+    {
+        type: "Additional Technologies",
+        skills: "Linux • Airflow • Kafka • MySQL • Git • Github • Docker • DuckDB",
+        
     }
+    
+];
+
+const certificatesData = [
+    {
+        name: "Microsoft Certified - Azure AI Fundamentals",
+        link: "",
+        
+    },
+    {
+        name: "Microsoft Certified - Azure Fundamentals",
+        link: "",
+        
+    },
+    {
+        name: "HackerRank - SQL(Advanced)",
+        link: "",
+        
+    },
     
 ];
 
@@ -127,6 +157,12 @@ function handleQuery(query) {
     }
     else if (query === "select * from experience") {
         return createTable(experienceData);
+    }
+    else if (query === "select * from skills") {
+        return createTable(skillsData);
+    }
+    else if (query === "select * from certificates") {
+        return createTable(certificatesData);
     }
     return "Query not recognized. Try 'SELECT * FROM education' or 'SELECT * FROM experience'";
 }
