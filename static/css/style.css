@@ -37,7 +37,7 @@ html, body {
     display: flex;
     justify-content: space-between; 
     width: 100%; 
-    height: 85%; 
+    height: 80%; 
     background-color:  #121212; 
     padding-bottom:  10px;
     padding-right:  10px;
@@ -176,6 +176,14 @@ button:hover{
     overflow: hidden; /* Hide overflow at container level */
 }
 
+#result-header{
+    position: sticky;
+    color: white;
+    margin-left: 20px;
+    font-size: 18.72px;
+    color:  #E1B36C; 
+}
+
 .result-table-wrapper {
     height: 100%;
     width: 100%;
@@ -183,6 +191,7 @@ button:hover{
     padding: 20px;
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
+    margin-top: -10px;
 }
 
 .result-table {
@@ -208,7 +217,8 @@ button:hover{
 .result-table th {
     background-color: rgb(30, 28, 28); /* Slightly darker for headers */
     font-weight: bold;
-    color: #ffffff; /* Bright color for headers */
+    /* color: #ffffff; */
+    color:  #74726e; 
     position: sticky;
     top: 0;
     z-index: 2;
@@ -542,5 +552,28 @@ button:hover{
 .collapsible.expanded {
     font-weight: bold; /* Optional styling to indicate active state */
 }
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    height: 5%;
+    width: 100%;
+    align-items: center;
+    font-size: 15px;
+    
+}
+
+#linkedin-footer{
+    color: white;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+
+.outer-box {
+    display: block;
+}
+
 
 

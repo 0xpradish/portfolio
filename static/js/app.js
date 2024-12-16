@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run query button event listener
     document.getElementById('runQuery').addEventListener('click', () => {
         const query = document.getElementById('queryInput').value;
-        const resultSpace = document.querySelector('.result-space');
+        const resultSpace = document.querySelector('.result-box');
         resultSpace.innerHTML = handleQuery(query);
     });
 });
