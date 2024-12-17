@@ -71,7 +71,7 @@ const experienceData = [
         role: "Data Engineer",
         location: "Coimbatore",
         year: "Jun 2024 - Present",
-        responsibility: "Optimized the Customer 360 pipeline with Python, Spark, and AWS, reducing runtime from 8 to 5 hours, and developed APIs with FastAPI for dashboards, enhancing insights for over 150M customers."
+        responsibility: "-Optimized the Customer 360 pipeline with Python, Spark, and AWS, reducing runtime from 8 to 5 hours, and developed APIs with FastAPI for dashboards, enhancing insights for over 150M customers.\n\n\n\n-Optimized the Customer 360 pipeline with Python, Spark, and AWS, reducing runtime from 8 to 5 hours, and developed APIs with FastAPI for dashboards, enhancing insights for over 150M customers"
     },
     {
         Company: "Mindgraph Technologies pvt ltd",
@@ -136,8 +136,13 @@ function createTable(data) {
                             ${Object.values(row).map((value, index) => {
                                 const key = Object.keys(row)[index];
                                 if (key.toLowerCase() === 'responsibility') {
-                                    return `<td><span class="responsibility-link" onclick="showModal('${value.replace(/'/g, "\\'")}')">${value.substring(0, 50)}...</span></td>`;
-                                }
+                                        const escapedValue = value.replace(/'/g, "\\'").replace(/\n/g, '\\n');
+                                        return `<td>
+                                            <span class="responsibility-link" onclick="showModal('${escapedValue}')">
+                                                ${value.substring(0, 50)}...
+                                            </span>
+                                        </td>`;
+                                    }
                                 return `<td>${value}</td>`;
                             }).join('')}
                         </tr>

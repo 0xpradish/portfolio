@@ -8,10 +8,11 @@ html, body {
     background-color: #121212;
     
 }
-.check{
+
+/*header - classes,id - header,navbar,id*/
+.header{
     width: 100%; 
     height: 15%;
-    /* background-color:  rgb(255, 255, 255); */
     background-color: #121212;
     padding-top: 10px;
     padding-right:  10px;
@@ -24,15 +25,27 @@ html, body {
     display: flex;
     justify-content: center;
     height: 100%; 
-    /* border: 2px solid rgb(40, 38, 38);  */
     box-sizing: border-box; 
-    /* background-color: #121212;    */
     background-color: #121212;
-    border-radius: 15px;
     align-items: center;
-    color: white;
+   
 }
 
+#name {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: transparent;
+    color: #E1B36C;
+    font-style: normal;
+    margin-left: 40px;
+    text-shadow: 1px 1px 2px rgba(225, 179, 108, 0.6), /* Slight glow */
+                 0 0 4px rgba(225, 179, 108, 0.4);   /* Soft spread */
+     animation: shake 2s infinite;
+}
+
+/******************************************************************************************************/
+
+/*outer-box - classes,id - outer-box,inner-box-schema,schema-tree,tree,collapsible,fa-solid fa-server,nested,fa-solid fa-database,fa-solid fa-table*/
 .outer-box {
     display: flex;
     justify-content: space-between; 
@@ -57,33 +70,102 @@ html, body {
     overflow-y: auto;
 }
 
+.inner-box-schema::-webkit-scrollbar {
+    width: 8px;
+}
+
+.inner-box-schema::-webkit-scrollbar-track {
+    background: #f1f1f1;
+} 
+
+.inner-box-schema::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.inner-box-schema::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.schema-tree {
+    padding: 10px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: white;
+}
+
+/* Root tree structure */
+.tree, .nested {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.tree li {
+    padding-left: 20px;
+    position: relative;
+}
+
+.collapsible {
+    display: inline-block;
+    padding: 2px 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fa-database, .fa-table, .fa-server {
+    margin-right: 8px;
+    color: #ffffff; 
+    
+}
+
+.fa-server{
+    margin-top: 8px;
+}
+.fa-database{
+    margin-top: 8px;
+}
+.fa-table{
+    margin-top: 16px;
+    margin-left:20px;
+}
+
+.nested {
+    display: none;
+}
+
+.nested.active {
+    display: block;
+}
+
+.collapsible.expanded {
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+
 #queryInput {
     background-color: #121212;
     color: white;
-    border: 2px solid rgb(40, 38, 38); /* Set the default border color */
+    border: 2px solid rgb(40, 38, 38); 
 }
 
 #queryInput:focus {
-    border-color: rgb(40, 38, 38); /* Change to your preferred focus border color */
-    outline: none; /* Removes the default browser outline */
+    border-color: rgb(40, 38, 38); 
+    outline: none; 
 }
 
 #queryInput:hover {
-    border-color: rgb(40, 38, 38); /* Optional: Set a hover border color for better interaction */
+    border-color: rgb(40, 38, 38); 
 }
 
 
 
-#name {
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: transparent;
-    color: #E1B36C;
-    font-style: normal;
-    margin-left: 40px;
-    text-shadow: 1px 1px 2px rgba(225, 179, 108, 0.6), /* Slight glow */
-                 0 0 4px rgba(225, 179, 108, 0.4);   /* Soft spread */
-}
+
 
 
 #query-name{
@@ -91,13 +173,6 @@ html, body {
 
 }
 
-/* .query-navbar h3 {
-    margin: 0; 
-    padding: 0;
-    color:  #E1B36C; 
-    padding: 5px;
-    margin-left: 20px;
-} */
 
 
 .inner-box-query-engine {
@@ -170,10 +245,10 @@ button:hover{
     border-radius: 15px;
     border: 2px solid rgb(40, 38, 38);
     box-shadow: 5px 5px 5px rgb(40, 38, 38);
-    padding: 0; /* Remove padding to keep scrollbar inside */
+    padding: 0; 
     box-sizing: border-box;
-    position: relative; /* For proper header positioning */
-    overflow: hidden; /* Hide overflow at container level */
+    position: relative;
+    overflow: hidden; 
 }
 
 #result-header{
@@ -206,43 +281,42 @@ button:hover{
     font-family: 'Courier New', Courier, monospace;
     padding: 12px 15px;
     text-align: left;
-    background-color: rgb(30, 28, 28); /* Subtle contrast for rows */
-    color: #e0e0e0; /* Light text for readability */
+    background-color: rgb(30, 28, 28); 
+    color: #e0e0e0; 
     white-space: normal;
     word-wrap: break-word;
     vertical-align: top;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Row separators */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .result-table th {
-    background-color: rgb(30, 28, 28); /* Slightly darker for headers */
+    background-color: rgb(30, 28, 28); 
     font-weight: bold;
-    /* color: #ffffff; */
     color:  #74726e; 
     position: sticky;
     top: 0;
     z-index: 2;
-    text-transform: uppercase; /* Optional for styling headers */
-    border-bottom: 2px solid #4CAF50; /* Add a green separator under the header */
+    text-transform: uppercase;
+    border-bottom: 2px solid #4CAF50; 
 }
 
 .result-table tr:nth-child(even) {
-    background-color: rgba(50, 50, 50, 0.9); /* Alternate row shading */
+    background-color: rgba(50, 50, 50, 0.9); 
 }
 
 .result-table tr:hover {
-    background-color: rgba(70, 70, 70, 0.9); /* Highlight on hover */
-    cursor: pointer; /* Add a pointer to indicate interactivity */
+    background-color: rgba(70, 70, 70, 0.9); 
+    cursor: pointer;
 }
 
 .result-table td:last-child {
     min-width: 200px;
     max-width: 400px;
-    color: #cfcfcf; /* Subdued text for secondary importance */
+    color: #cfcfcf;
 }
 
 .result-table th, .result-table td {
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
@@ -326,11 +400,7 @@ button:hover{
     color: #333;
 }
 
-.schema-tree {
-    padding: 10px;
-    overflow-y: auto;
-    flex-grow: 1;
-}
+
 
 .schema-root {
     list-style: none;
@@ -377,28 +447,8 @@ button:hover{
 }
 
 /* Optional: Scrollbar styling */
-.inner-box-schema::-webkit-scrollbar {
-    width: 8px;
-}
-
-.inner-box-schema::-webkit-scrollbar-track {
-    background: #f1f1f1;
-} 
-
-.inner-box-schema::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-}
-
-.inner-box-schema::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
 
 
-.animated-heading,#name {
-   
-    animation: shake 2s infinite;
-}
 
 
 @keyframes shake {
@@ -440,7 +490,7 @@ button:hover{
 
 
 
-/* Popup styles */
+
 .popup {
     display: none;
     position: fixed;
@@ -478,81 +528,6 @@ button:hover{
     cursor: pointer;
 }
 
-
-.schema-tree {
-    padding: 10px;
-    font-family: 'Courier New', Courier, monospace;  
-    font-size: 18px;
-    color: white;
-}
-
-.tree, .nested {
-    list-style: none;
-    padding-left: 20px;
-    position: relative;
-}
-
-.tree .nested::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10px;
-    width: 1px;
-    height: 100%;
-    /* background-color: #ccc; */
-}
-
-.tree li {
-    padding: 5px 0;
-    position: relative;
-}
-
-.tree li::before, .tree li::after {
-    content: '';
-    position: absolute;
-    left: -20px;
-}
-
-.tree li::before {
-    top: 0;
-    width: 1px;
-    height: 100%;
-    /* background-color: #ccc; */
-}
-
-.tree li::after {
-    top: 10px;
-    width: 10px;
-    height: 1px;
-    /* background-color: #ccc; */
-}
-
-.tree li:last-child::before {
-    height: 10px;
-}
-
-.collapsible {
-    cursor: pointer;
-    padding: 2px 6px;
-    border-radius: 3px;
-    transition: background-color 0.2s;
-}
-
-
-
-.nested {
-    display: none; /* Hidden by default */
-    padding-left: 20px; /* Indentation for nested lists */
-}
-
-.nested.active {
-    display: block; /* Shown when active class is applied */
-}
-
-.collapsible.expanded {
-    font-weight: bold; /* Optional styling to indicate active state */
-}
-
 .footer{
     display: flex;
     justify-content: space-between;
@@ -569,11 +544,4 @@ button:hover{
     margin-right: 20px;
     font-weight: bold;
 }
-
-
-.outer-box {
-    display: block;
-}
-
-
 
